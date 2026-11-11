@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Sicherheitslücke melden / Report a security vulnerability
+    url: https://github.com/andiwirz/Scanvento-feedback/blob/main/SECURITY.md
+    about: Bitte vertraulich an contact@scanvento.com – nicht als öffentliches Issue. / Please report confidentially to contact@scanvento.com, not as a public issue.
+  - name: Dokumentation / Documentation
+    url: https://scanvento.com/docs
+    about: Anleitungen zu Installation, Betrieb und Bedienung. / Guides for installation, operations and everyday use.
+  - name: Kontakt / Contact
+    url: https://scanvento.com
+    about: Allgemeine Anfragen an contact@scanvento.com. / General enquiries to contact@scanvento.com.

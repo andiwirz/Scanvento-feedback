@@ -1,0 +1,88 @@
+name: Fehler / Bug
+description: Etwas funktioniert nicht wie erwartet. / Something does not work as expected.
+title: "[Fehler / Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für die Meldung! Bitte keine Passwörter, Tokens, Lizenzschlüssel oder internen Hostnamen/IP-Adressen einfügen.
+        Thanks for reporting! Please do not paste passwords, tokens, licence keys or internal host names/IP addresses.
+        **Sicherheitslücken / security vulnerabilities:** contact@scanvento.com (siehe/see SECURITY.md).
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Administration → System, z. B. 0.0.12 / e.g. 0.0.12
+      placeholder: "0.0.12"
+    validations:
+      required: true
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Betriebsart / Deployment
+      options:
+        - Docker / Docker Compose
+        - Linux (Paket / package)
+        - Windows
+        - Kubernetes / Helm / OpenShift
+        - TrueNAS
+        - Cloud (Render, Oracle Cloud, Hugging Face …)
+        - Andere / Other
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Bereich / Area
+      options:
+        - Assets / Inventar / Inventory
+        - Discovery / Collector
+        - Agent (svagent)
+        - CMDB / Netzwerk / Network
+        - Software & Lizenzen / Licences
+        - Sicherheit & Compliance / Security & compliance
+        - Rechenzentrum / Data centre
+        - Automationen & Berichte / Automations & reports
+        - Integrationen / Integrations
+        - Administration / Anmeldung / Sign-in
+        - Installation / Update
+        - Andere / Other
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Was ist passiert? / What happened?
+      description: Und was hast du stattdessen erwartet? / And what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zum Nachstellen / Steps to reproduce
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+  - type: input
+    id: errorid
+    attributes:
+      label: Fehler-ID / Error id
+      description: Falls die App eine Fehler-ID angezeigt hat (aus «Problem melden» übernommen). / If the app showed an error id (copied from "Report a problem").
+  - type: textarea
+    id: details
+    attributes:
+      label: Weitere Angaben / Additional details
+      description: Browser, Betriebssystem des Agents, Screenshots, Ausschnitte aus Logs (vorher auf vertrauliche Daten prüfen). / Browser, agent OS, screenshots, log excerpts (check for confidential data first).
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Bestätigung / Confirmation
+      options:
+        - label: Ich habe geprüft, dass es dazu noch kein Issue gibt. / I checked that no issue exists for this yet.
+          required: true
+        - label: Die Meldung enthält keine vertraulichen Daten. / The report contains no confidential data.
+          required: true

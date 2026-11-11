@@ -1,0 +1,32 @@
+name: Wunsch / Feature request
+description: Eine Idee oder Verbesserung für Scanvento. / An idea or improvement for Scanvento.
+title: "[Wunsch / Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Welches Problem soll gelöst werden? / Which problem should be solved?
+      description: Beschreibe die Situation aus deiner Sicht. / Describe the situation from your point of view.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Vorschlag / Proposal
+      description: Wie stellst du dir die Lösung vor? / How do you picture the solution?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativen / Alternatives
+      description: Wie löst du es heute, oder wie machen es andere Werkzeuge? / How do you solve it today, or how do other tools do it?
+  - type: dropdown
+    id: importance
+    attributes:
+      label: Wie wichtig ist das für dich? / How important is this for you?
+      options:
+        - Wäre schön / Nice to have
+        - Wichtig / Important
+        - Blockiert den Einsatz / Blocks adoption
